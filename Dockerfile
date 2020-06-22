@@ -24,7 +24,7 @@ RUN npm install
 FROM nginx
 
 WORKDIR /usr/share/nginx/html/
-COPY --from=builder /usr/src/app/dist/backnodefinal/ /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/ /usr/share/nginx/html
 EXPOSE 3000
 
 CMD ["node", "dist/index.js",nginx -g 'daemon off;']
