@@ -12,7 +12,7 @@
 
 #CMD ["node", "dist/index.js"]
 
-FROM node:latest
+FROM node:latest as builder
 
 WORKDIR /usr/src/app
 RUN mkdir -p /usr/src/app
