@@ -51,7 +51,7 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
             res.status(200).json({
                 ok: true,
                 msg: 'Usuario autenticado correctamente',
-                payload: {
+                respuestaContenido: {
                     userName: validUser.userName,
                     rol: validUser.rol,
                     token: token
